@@ -6,7 +6,7 @@ This installer script sets up the hi-ai assistant for Zorin OS 17.2.
 - Creates a Python virtual environment to avoid pip system conflicts (PEP 668 compliant)
 - Installs `openai==0.28` to avoid breaking changes in newer versions
 - Automatically fixes pip installation issues on Zorin and Debian-based systems
-- Prompts user for their own OpenAI API key at first launch (no key hardcoded)
+- Prompts user for their own OpenAI API key at first launch (no key hardcoded) you will need to make an openai account and get an api key ( https://auth.openai.com/log-in )
 - Installs dependencies including: openai, termcolor, tqdm, and more
 - Installs `hi-ai` launcher to /usr/local/bin so it can be used globally
 - Full ChatGPT-powered assistant that can run Linux commands and self-repair using GPT feedback
