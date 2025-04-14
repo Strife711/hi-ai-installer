@@ -1,0 +1,45 @@
+What is hi-ai?
+
+hi-ai is a terminal-based AI assistant — but it's not just here to chat. It thinks. It acts. It executes real Linux commands, fixes broken ones, and learns from every interaction. Powered by OpenAI's GPT-4, this is an early-stage autonomous AI operator built for people who want more than just suggestions — they want results.
+
+hi-ai lives in your terminal. You type something — “update my machine”, “fix networking”, or even “install Steam” — and it figures out the correct Linux command, runs it, checks the result, and tries to fix any errors automatically using GPT. If it fails, it learns. If it works, it remembers.
+⚠️ Pre-Beta Warning
+
+This is a pre-beta build. That means:
+
+    It has bugs. Some outputs might be wrong or incomplete.
+
+    It's still evolving — expect rapid changes and weird behavior at times.
+
+    It currently works best on Zorin OS 17.2 (Ubuntu-based), and has been tuned/tested primarily there.
+
+    Dependency issues (like pip restrictions or OpenAI library mismatches) have been handled, but if your distro behaves differently, you might run into errors.
+
+    It requires an OpenAI API key from platform.openai.com.
+
+🛠️ Why this matters
+
+hi-ai was built out of frustration — tired of copy-pasting command fixes, running into package errors, and Googling for answers. The goal is to build something that:
+
+    Understands natural language
+
+    Executes real Linux system tasks
+
+    Learns from success and failure
+
+    Becomes more independent over time
+
+This is not a gimmick — this is a serious step toward a self-correcting, self-operating Linux AI.
+🤝 Call for Contributors
+
+This is an evolving project built by Paul Legaspi, and it needs your help. Whether it's:
+
+    Packaging it better for other distros
+
+    Expanding its plugin system
+
+    Improving its fallback logic
+
+    Making the installer bulletproof
+
+... every contribution counts.
