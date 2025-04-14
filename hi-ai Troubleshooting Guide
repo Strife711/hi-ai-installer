@@ -1,0 +1,80 @@
+# hi-ai Troubleshooting Guide
+
+If you're running the hi-ai installer and things don't go as planned, here's a quick reference to fix common issues.
+
+---
+
+## 🔑 Step 1: Get Your OpenAI API Key
+hi-ai needs your OpenAI API key to function.
+
+1. Go to: [https://platform.openai.com/account/api-keys](https://platform.openai.com/account/api-keys)
+2. Log in and click **"Create new secret key"**
+3. Copy it and save it somewhere safe
+4. When hi-ai first runs, it will ask for this key
+
+---
+
+## 🛠️ If The Installer Fails...
+
+### 1. ❌ Pip refuses to install packages
+Zorin OS has pip restrictions. You need to install these:
+
+```bash
+sudo apt install python3-venv python3-full -y
+```
+
+Then rerun the installer.
+
+---
+
+### 2. ❌ "No module named openai"
+If hi-ai runs but fails on the first command:
+
+```bash
+source ~/.hi-ai-env/bin/activate
+pip install --break-system-packages openai==0.28
+```
+
+---
+
+### 3. ❌ `hi-ai: command not found`
+The launcher may be missing. Create it manually:
+
+```bash
+sudo ln -s /home/$USER/.hi-ai.py /usr/local/bin/hi-ai
+sudo chmod +x /usr/local/bin/hi-ai
+```
+
+If that doesn't work:
+```bash
+sudo nano /usr/local/bin/hi-ai
+```
+Paste this:
+```bash
+#!/bin/bash
+source /home/$USER/.hi-ai-env/bin/activate
+python3 /home/$USER/.hi-ai.py
+```
+Then:
+```bash
+sudo chmod +x /usr/local/bin/hi-ai
+```
+
+---
+
+## ✅ After These Fixes
+Type:
+```bash
+hi-ai
+```
+You should see:
+```
+🧠 Nexus is online. Type anything. Type 'exit' to quit.
+```
+
+You're now good to go. Welcome to the hi-ai system.
+
+---
+
+Made with ❤️ by **Paul Legaspi**  |  Project: Nexus / hi-ai
+
